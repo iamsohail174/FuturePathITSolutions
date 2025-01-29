@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Methodology- Future Path IT Solutions</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .whatsapp-icon {
+      position: fixed;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      width: 60px;
+      height: 60px;
+      z-index: 1000;
+      border-radius: 50%;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: grab;
+      transition: transform 0.2s ease;
+    }
+    .whatsapp-icon1 {
+      position: fixed;
+      top: 60%;
+      /* Default vertical center */
+      left: 20px;
+      /* Default left position */
+      transform: translateY(-50%);
+      /* Center vertically */
+      width: 60px;
+      height: 60px;
+      z-index: 1000;
+      border-radius: 50%;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: grab;
+      /* Indicate draggable functionality */
+      transition: transform 0.2s ease;
+  }
+
+
+    .whatsapp-icon:hover {
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    .whatsapp-icon1:hover {
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .whatsapp-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+    .whatsapp-icon1 img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .whatsapp-icon {
+        width: 50px;
+        height: 50px;
+      }
+      .whatsapp-icon1 {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      position: relative;
+      margin-top: 80px; /* Adjust margin-top to align with navbar */
+      height: 300px; /* Reduced height for the image container */
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%; /* Ensure the image fills the container */
+      object-fit: cover; /* Maintain aspect ratio and cover the container */
+    }
+
+
+    .image-overlay {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: rgb(5, 40, 62);
+        font-size: 20px;
+        text-transform:capitalize;
+        font-weight: bold;
+        max-width: 90%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .dynamic-data {
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        text-align: center;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+     
+      
+      
+    .dynamic-data span {
+      color:black;
+      padding: 10px 20px;
+      border-radius: 3px;
+    }
+
+    .methodology-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    .methodology-text {
+      flex: 1;
+      padding-right: 20px;
+    }
+
+    .methodology-image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .methodology-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .footer {
+      background-color: #800080;
+      padding: 40px 20px;
+      font-size: 14px;
+    }
+
+    .footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+    }
+
+    @media screen and (max-width: 768px) {
+        .dynamic-data {
+            flex-direction: column;
+            gap: 5px;
+            font-size: 1rem;
+            top:60%;
+          }
+        
+          .image-overlay {
+            padding: 5px;
+            top: 20%;
+            flex-direction: column;
+          }
+          
+        
+        
+      .methodology-section {
+        flex-direction: column;
+      }
+
+      .methodology-text,
+      .methodology-image {
+        text-align: center;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://wa.me/8618151740" target="_blank" class="whatsapp-icon" id="draggable-icon"
+  title="Chat with us on WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+<a href="https://www.linkedin.com/company/future-path-it-solutions/" target="_blank" class="whatsapp-icon1" id="draggable-icon"
+title="Connect with us in LinkedIn">
+<img src="https://static.vecteezy.com/system/resources/previews/021/460/490/original/linkedin-logo-free-download-free-png.png" alt="WhatsApp" />
+</a>
+
+
+
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo" style="height: 50px; width: 150px; border-radius: 5px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><b style="color: white;">Home</b></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b style="color: white;">Job Guaranteed Courses</b>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="java-full-stack.html">Java Full Stack Developer</a>
+            <a class="dropdown-item" href="software-testing.html">Software Testing Training</a>
+            <a class="dropdown-item" href="aws-certification.html">Amazon Web Services (AWS)</a>
+            <a class="dropdown-item" href="python-training.html">Python</a>
+            <a class="dropdown-item" href="devops-training.html">DevOps</a>
+            <a class="dropdown-item" href="salesforce.html">Salesforce</a>
+            <a class="dropdown-item" href="mainframe.html">MainFrame</a>
+            <a class="dropdown-item" href="Business and Management.html">Business and Management</a>
+            <a class="dropdown-item" href="Mortgage.html">Mortgage</a>
+            <a class="dropdown-item" href="Digital marketing.html">Digital Marketing</a>
+            <a class="dropdown-item" href="Database Administration.html">Database Adminsitration</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><b style="color: white;">About Us</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ourmethodology.html"><b style="color: white;">Our Methodology</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><b style="color: white;">Contact Us</b></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Image and Dynamic Data Section -->
+  <div class="image-container">
+    <img src="plain.png" alt="Background Image">
+    
+    <div class="image-overlay" style="margin-bottom: 20px;font-size:20px;display:block;">
+      Best Software Training Consulting and Outsourcing
+    </div>
+    
+<br>
+
+    <div class="dynamic-data">
+      <span>Students Enrolled: <br>100</span>
+      <span>Qualified Employees: <br>150</span>
+      <span>Students Benefited: <br>200</span>
+    </div>
+    
+
+</div>
+
+<!-- Our Methodology Section -->
+<div class="methodology-section">
+    <div class="methodology-text">
+        <h2>Our Methodology</h2>
+        <p>
+            At Future Path IT Solutions, we follow a structured and proven methodology to ensure the success of our students. Our approach includes:
+        </p>
+        <ul>
+            <li>Hands-on training with real-world projects</li>
+            <li>Personalized mentorship and career guidance</li>
+            <li>Regular assessments and feedback</li>
+            <li>Job placement assistance</li>
+        </ul>
+        
+    </div>
+    <div class="methodology-image">
+        <img src="Methodology.png" alt="Our Methodology" style="width:70%;height:40%;">
+    </div>
+</div>
+
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="logo.png" alt="Future Path Logo" class="logo" style="height: 50px;width:200px">
+          <p>India's best Job Consultancy and Recruitment Agency offering both work-from-home and office jobs. Find the best jobs for yourself or hire employees for your company with the help of our professionals.</p>
+        </div>
+        <div class="col-md-3">
+          <h5>Company</h5>
+          <ul class="list-unstyled">
+            <li>✔ Home</li>
+            <li>✔ About Us</li>
+            <li>✔ Careers</li>
+            <li>✔ Privacy Policy</li>
+            <li>✔ Terms & Conditions</li>
+            <li>✔ Refund/Cancellation Policy</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Job Guaranteed Courses</h5>
+          <ul class="list-unstyled">
+            <li>✔ <a href="java-full-stack.html" style="text-decoration: none; color: inherit;">Java Full Stack Developer</a></li>
+            <li>✔ <a href="python-training.html" style="text-decoration: none; color: inherit;">Python Training</a></li>
+            <li>✔ <a href="software-testing.html" style="text-decoration: none; color: inherit;">Software Testing</a></li>
+            <li>✔ <a href="devops-training.html" style="text-decoration: none; color: inherit;">DevOps Training</a></li>
+            <li>✔ <a href="salesforce.html" style="text-decoration: none; color: inherit;">Salesforce</a></li>
+            <li>✔ <a href="aws-certification.html" style="text-decoration: none; color: inherit;">AWS Certification Training</a></li>
+            <li>✔ <a href="Business and Management.html" style="text-decoration: none; color: inherit;">Business and Management Training</a></li>
+            <li>✔ <a href="Mortgage.html" style="text-decoration: none; color: inherit;">Mortgage</a></li>
+            <li>✔ <a href="Digital marketing.html" style="text-decoration: none; color: inherit;">Digital Marketing</a></li>
+            <li>✔ <a href="Database Administration.html" style="text-decoration: none; color: inherit;">Database Adminsitration</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contact Information</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/9Mn5bxyLG1hCv3c76">No 112, 1st floor, Shirdi Sai Nagar, RK Hegde Nagar, Bengaluru, Karnataka, India, 560077.</a></li>
+            <li>Email: <a href="mailto:careers@futurepathitsolution.com">careers@futurepathitsolution.com</a></li>
+            <li>Phone: <a href="tel:+918019989324">+91 8019989324</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5>Follow Us</h5>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/company/future-path-it-solutions/" class="fab fa-linkedin-in" aria-label="LinkedIn"></a>
+          <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+          <a href="https://wa.me/8618151740" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
+          <a href="mailto:m8970652@gmail.com" class="fas fa-envelope" aria-label="Gmail"></a>
+        </div>
+      </div>
+      <div class="text-center">
+        <p>&copy; 2025 Future Path IT Solutions. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // JavaScript for draggable WhatsApp icon (optional)
+    let icon = document.getElementById('draggable-icon');
+    icon.addEventListener('mousedown', function (e) {
+      let offsetX = e.clientX - icon.getBoundingClientRect().left;
+      let offsetY = e.clientY - icon.getBoundingClientRect().top;
+
+      function moveAt(e) {
+        icon.style.left = e.pageX - offsetX + 'px';
+        icon.style.top = e.pageY - offsetY + 'px';
+      }
+
+      document.addEventListener('mousemove', moveAt);
+      document.addEventListener('mouseup', function () {
+        document.removeEventListener('mousemove', moveAt);
+      });
+    });
+  </script>
+</body>
+
+</html>

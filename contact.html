@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Path IT Solutions</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container-1 {
+      background-color: #fff;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+    }
+
+    .left-section {
+      width: 300px;
+      background-color: #333;
+      color: #fff;
+      padding: 30px;
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .left-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .left-section p {
+      margin-bottom: 10px;
+    }
+
+    .left-section i {
+      margin-right: 10px;
+    }
+
+    .right-section {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    /* Responsive styles for smaller devices */
+    @media (max-width: 991.98px) {
+
+      /* Tablet View */
+      .container-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+      }
+
+      .left-section,
+      .right-section {
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 20px;
+      }
+
+      .left-section {
+        border-radius: 5px;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      /* Mobile View */
+      .container-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 80px;
+      }
+
+      .left-section h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+
+      .left-section p {
+        font-size: 14px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      button {
+        padding: 8px 15px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      /* Extra Small Mobile View */
+      .container-1 {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        margin-top: 80px;
+      }
+
+      .left-section {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .left-section h2 {
+        font-size: 16px;
+      }
+
+      .left-section p {
+        font-size: 12px;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        padding: 6px;
+        font-size: 12px;
+      }
+
+      button {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+    }
+    /* WhatsApp Icon Base */
+    /* WhatsApp Icon Base */
+    /* WhatsApp Icon Base */
+    .whatsapp-icon {
+        position: fixed;
+        top: 50%;
+        /* Default vertical center */
+        left: 20px;
+        /* Default left position */
+        transform: translateY(-50%);
+        /* Center vertically */
+        width: 60px;
+        height: 60px;
+        z-index: 1000;
+        border-radius: 50%;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        cursor: grab;
+        /* Indicate draggable functionality */
+        transition: transform 0.2s ease;
+    }
+    .whatsapp-icon1 {
+      position: fixed;
+      top: 60%;
+      /* Default vertical center */
+      left: 20px;
+      /* Default left position */
+      transform: translateY(-50%);
+      /* Center vertically */
+      width: 60px;
+      height: 60px;
+      z-index: 1000;
+      border-radius: 50%;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      cursor: grab;
+      /* Indicate draggable functionality */
+      transition: transform 0.2s ease;
+  }
+
+    /* Hover Effect */
+    .whatsapp-icon:hover {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+    }
+    .whatsapp-icon1:hover {
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3);
+  }
+
+    /* Icon Image Styling */
+    .whatsapp-icon img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .whatsapp-icon1 img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+  }
+
+    /* Responsive for Mobile */
+    @media screen and (max-width: 768px) {
+        .whatsapp-icon {
+            width: 50px;
+            height: 50px;
+        }
+        .whatsapp-icon1 {
+          width: 50px;
+          height: 50px;
+      }
+    }
+    /* Hide the dropdown menu by default */
+.nav-item .dropdown-menu {
+  display: none;
+}
+
+/* Show the dropdown menu when hovering over the parent item */
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+/* Style the dropdown items */
+.nav-item .dropdown-menu .dropdown-item {
+  background-color: transparent;
+  color: black;
+}
+
+/* Change the background and font color when hovering over the dropdown items */
+.nav-item .dropdown-menu .dropdown-item:hover {
+  background-color: white;
+  color: black;
+}
+
+</style>
+
+<body>
+    <!-- WhatsApp Icon -->
+    <!-- WhatsApp Icon -->
+    <a href="https://wa.me/8618151740" target="_blank" class="whatsapp-icon" id="draggable-icon"
+    title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+</a>
+<a href="https://www.linkedin.com/company/future-path-it-solutions/" target="_blank" class="whatsapp-icon1" id="draggable-icon"
+title="Connect with us in LinkedIn">
+<img src="https://static.vecteezy.com/system/resources/previews/021/460/490/original/linkedin-logo-free-download-free-png.png" alt="WhatsApp" />
+</a>
+
+
+
+
+
+    <script>
+        // Make the WhatsApp icon draggable
+const icon = document.getElementById("draggable-icon");
+
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+icon.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    offsetX = e.clientX - icon.getBoundingClientRect().left;
+    offsetY = e.clientY - icon.getBoundingClientRect().top;
+    icon.style.cursor = "grabbing"; // Change cursor on drag
+});
+
+document.addEventListener("mousemove", (e) => {
+    if (isDragging) {
+        const newX = e.clientX - offsetX;
+        const newY = e.clientY - offsetY;
+
+        // Set new position for the icon
+        icon.style.left = `${newX}px`;
+        icon.style.top = `${newY}px`;
+    }
+});
+
+document.addEventListener("mouseup", () => {
+    isDragging = false;
+    icon.style.cursor = "grab"; // Reset cursor after drag
+});
+
+    </script>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html"><img src="logo.png" alt="Logo"
+        style="height: 50px; width: 150px; border-radius: 5px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"><b style="color: white;">Home</b></a>
+        </li>
+
+        <li class="nav-item">
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <b style="color: white;">Job Guaranteed Courses</b> 
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="java-full-stack.html">Java Full Stack Developer</a>
+                  <a class="dropdown-item" href="software-testing.html">Software Testing Training</a>
+                  <a class="dropdown-item" href="aws-certification.html">Amazon Web Services (AWS)</a>
+                  <a class="dropdown-item" href="python-training.html">Python</a>
+                  <a class="dropdown-item" href="devops-training.html">DevOps</a>
+                  <a class="dropdown-item" href="salesforce.html">Salesforce</a>
+                  <a class="dropdown-item" href="mainframe.html">MainFrames</a>
+                  <a class="dropdown-item" href="Business and Management.html">Business and Management</a>
+                  <a class="dropdown-item" href="Mortgage.html">Mortgage</a>
+                  <a class="dropdown-item" href="Digital marketing.html">Digital Marketing</a>
+                  <a class="dropdown-item" href="Database Administration.html">Database Adminsitration</a>
+              </div>
+          
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"><b style="color: white;">About Us</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ourmethodology.html"><b style="color: white;">Our Methodology</b></a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html"><b style="color: white;">Contact Us</b></a>
+        </li>
+
+      </ul>
+    </div>
+
+  </nav><br>
+
+  
+
+  <div class="container-1">
+      
+    <div class="left-section">
+      <h2>Contact Support</h2>
+
+
+      <p><i class="fas fa-map-marker-alt"></i><a style="color: white;"
+          href="https://maps.app.goo.gl/9Mn5bxyLG1hCv3c76">No
+          112, 1st floor, Shirdi Sai Nagar, RK Hegde Nagar, Bengaluru, Karnataka, India,
+          560077.</a></p>
+      <p><i class="fas fa-envelope"></i><a href="mailto:careers@futurepathitsolution.com">careers@futurepathitsolution.com</a></p>
+      <p><i class="fas fa-phone-alt"></i> +91 86181 51740</p>
+
+      <p>Fill out your details to be contacted.</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="https://wa.me/8618151740"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <div class="right-section">
+      <form id="emailForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your Name" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Your Email" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" placeholder="Your Phone" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="graduation">Year of Graduation</label>
+          <input type="date" id="graduation" required>
+        </div>
+    
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Leave your Message for Us" required></textarea>
+        </div>
+    
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+    
+    <script>
+      document.getElementById("emailForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form submission
+    
+        // Collect form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const graduation = document.getElementById("graduation").value;
+        const message = document.getElementById("message").value;
+    
+        // Create the mailto link
+        const subject = encodeURIComponent("Contact Form Submission");
+        const body = encodeURIComponent(
+          `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nYear of Graduation: ${graduation}\nMessage: ${message}`
+        );
+    
+        const mailtoLink = `mailto:m8970652@gmail.com?subject=${subject}&body=${body}`;
+    
+        // Open the email client
+        window.location.href = mailtoLink;
+      });
+    </script>
+    
+ <div class="footer">
+              <div class="container">
+                  <div class="row">
+                      <!-- About Company -->
+                      <div class="col-md-3">
+                          <img src="logo.png" alt="Future Path Logo" class="logo">
+                          <p>
+                              Future Path IT Solutions is a Job Consultancy and Recruitment Agency having specialization in reducing the clutter and streamlining the manpower hunting for companies, no matter how Big or Small. We provide end-to-end hiring solutions.
+                          </p>
+                      </div>
+          
+                      <!-- Company Links -->
+                      <div class="col-md-3">
+                          <h5>Company</h5>
+                          <ul class="list-unstyled">
+                              <li>✔ Home</li>
+                              <li>✔ About Us</li>
+                              <li>✔ Careers</li>
+                              <li>✔ Privacy Policy</li>
+                              <li>✔ Terms & Conditions</li>
+                              <li>✔ Refund/Cancellation Policy</li>
+                          </ul>
+                      </div>
+          
+                      <!-- Job Guaranteed Courses -->
+                      <div class="col-md-3">
+                        <h5>Job Guaranteed Courses</h5>
+                        <ul class="list-unstyled">
+                            <li>✔ <a href="java-full-stack.html" style="text-decoration: none; color: inherit;">Java Full Stack Developer</a></li>
+                            <li>✔ <a href="python-training.html" style="text-decoration: none; color: inherit;">Python Training</a></li>
+                            <li>✔ <a href="software-testing.html" style="text-decoration: none; color: inherit;">Software Testing</a></li>
+                            <li>✔ <a href="devops-training.html" style="text-decoration: none; color: inherit;">DevOps Training</a></li>
+                            <li>✔ <a href="salesforce.html" style="text-decoration: none; color: inherit;">Salesforce</a></li>
+                            <li>✔ <a href="aws-certification.html" style="text-decoration: none; color: inherit;">AWS Certification Training</a></li>
+                            <li>✔ <a href="Business and Management.html" style="text-decoration: none; color: inherit;">Business and Management Training</a></li>
+                            <li>✔ <a href="Mortgage.html" style="text-decoration: none; color: inherit;">Mortgage</a></li>
+                            <li>✔ <a href="Digital marketing.html" style="text-decoration: none; color: inherit;">Digital Marketing</a></li>
+                            <li>✔ <a href="Database Administration.html" style="text-decoration: none; color: inherit;">Database Adminsitration</a></li>
+                        </ul>
+                    </div>
+                      <!-- Contact Info -->
+                      <div class="col-md-3">
+                          <h5>Contact Information</h5>
+                          <ul class="list-unstyled">
+                              <li><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/9Mn5bxyLG1hCv3c76">No
+                                  112, 1st floor, Shirdi Sai Nagar, RK Hegde Nagar, Bengaluru, Karnataka, India,
+                                  560077.</a></li>
+                              <li>Email: <a href="mailto:careers@futurepathitsolution.com">careers@futurepathitsolution.com</a></li>
+                              <li>Phone: +91 86181 51740</li>
+      
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+          
+          
+                      <a href="https://www.linkedin.com/company/future-path-it-solutions/" class="fab fa-linkedin-in" aria-label="LinkedIn"></a>
+                      <a href="#" class="fab fa-instagram"
+                        aria-label="Instagram"></a>
+          
+                      <a href="https://wa.me/8618151740" class="fab fa-whatsapp" aria-label="WhatsApp"></a>
+                      <a href="mailto:m8970652@gmail.com" class="fas fa-envelope" aria-label="Gmail"></a>
+                    </div>
+                  </div>
+                  <div>
+    
+                
+                <div class="text-center">
+                    <p>&copy; 2025 Future Path IT Solutions. All rights reserved.</p>
+                </div>
+                </div>
+    
+            </div>
+              </div>
+          </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
